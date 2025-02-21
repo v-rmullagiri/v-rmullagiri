@@ -26,7 +26,7 @@ To generate the above resources, you must execute the following terraform script
 
 - Log Setup File
 - Authentication setup file
-- 
+
 <a name="log">
 
 ## Steps to execute Terrraform scripts for Log Setup
