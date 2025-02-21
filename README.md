@@ -1,7 +1,7 @@
 # Integrating Google Cloud Platform IAM into Microsoft Sentinel
 ## Table of contents
 - [Introduction](#intro)
-- [Steps to install The Connector](#step1)
+- [Prerequisites](#step1)
 - [Steps to add the new Collector](#log)
 - [Steps to execute Terraform Scripts](#terraform)
 
