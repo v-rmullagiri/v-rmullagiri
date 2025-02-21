@@ -2,7 +2,7 @@
 ## Table of contents
 - [Introduction](#intro)
 - [Steps to install The Connector](#step1)
-- [Steps to add the new Collector](#step2)
+- [Steps to add the new Collector](#log)
 - [Steps to execute Terraform Scripts](#terraform)
 
 
