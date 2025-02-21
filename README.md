@@ -2,8 +2,8 @@
 ## Table of contents
 - [Introduction](#intro)
 - [Prerequisites](#step1)
-- [Steps to add the new Collector](#log)
-- [Steps to execute Terraform Scripts](#terraform)
+- [Steps to execute Terraform Scripts for log setup](#log)
+- [Steps to execute Terraform Scripts for Authentication setup](#auth)
 
 
 <a name="intro">
