@@ -67,14 +67,14 @@ To generate the above resources, you must execute the following steps.
 12. Stack
 - This stack integrates Microsoft Sentinel by creating an IAM role with minimal permissions. This role allows Microsoft Sentinel to access your logs stored in a specified S3 bucket and SQS queue. The stack also creates an S3 bucket, an SQS Queue, and sets up S3 notifications. Additionally, it includes necessary IAM policies.
 - 
-**Configuring the existing firewall**
+**Configuring the existing firewall** 
 1. Navigate to the **Firewall → Logging**
 2. click on edit - select log type(Alert,Flow)
 3. select log destination  - S3 bucket
 4. fill the S3 bucket name for Flow & Alert log destination columns    
 
 - This will use full for the send the notifications to SQS bucket and send the logs to sentinal 
-- SQS will show the Messages like send, rerceived,deleted & etc
+- SQS will show the Messages like send, rerceived,deleted & etc     
   
 
  
