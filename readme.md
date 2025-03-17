@@ -8,7 +8,7 @@
 <a name="intro">
  
 ## Introduction
-AWS Network Firewall connector ingests many AWS service logs into Azure Sentinel. Currently supported logs include: flow logs & alert logs.
+AWS Network Firewall connector ingests  AWS service logs into Azure Sentinel. Currently supported logs include: flow logs & Alert logs.
  
 This connector requires that each AWS service publish its logs to an S3 bucket in your account. In addition you must configure SQS notifications and permissions for the connector to retrieve the logs.
  
@@ -33,6 +33,8 @@ The below mentioned resources are required to connect Aws Network Firewall with 
 - SQS
 - AWS Network Firewall
 - AWS cloud Watch
+- Stacks
+- TLS
 
  
 To generate the above resources, you must execute the following steps.
@@ -66,15 +68,40 @@ To generate the above resources, you must execute the following steps.
 11. Review & submit it ( stack has created)
 12. Stack
 - This stack integrates Microsoft Sentinel by creating an IAM role with minimal permissions. This role allows Microsoft Sentinel to access your logs stored in a specified S3 bucket and SQS queue. The stack also creates an S3 bucket, an SQS Queue, and sets up S3 notifications. Additionally, it includes necessary IAM policies.
-- 
 **Configuring the existing firewall** 
 1. Navigate to the **Firewall → Logging**
-2. click on edit - select log type(Alert,Flow)
+2. click on edit - select log type(Alert,Flow,TLS)
 3. select log destination  - S3 bucket
-4. fill the S3 bucket name for Flow & Alert log destination columns    
+4. fill the S3 bucket name for Flow ,TLS & Alert log destination columns    
 
 - This will use full for the send the notifications to SQS bucket and send the logs to sentinal 
 - SQS will show the Messages like send, rerceived,deleted & etc     
+  
+
+**TLS**
+- Navigate to the TLS inspection configurations in AWs sonsole
+- click on Create TLS inspection configurations
+- Attach CA certificate for outbound SSL/TLS inspection - new (which is alerady created)
+- click on next Describe TLS inspection configuration page will open
+- in that fill the Name,Description and clock on next then Define scope  page will open fill the Source IP& source port range and Destination IP& destination port range, add scope configuration and click on next.
+- Advanced settings  page will open in that nothing is required to fill and click on next  // enable the two check box like (Customer managed key,Certificate revocation status)
+- no need to add any tags & click on next and Review and create TLS inspection configuration has done.
+AWS Network Firewall provides deep packet inspection and stateful filtering capabilities, including TLS inspection for secure traffic monitoring and control. It allows organizations to enforce security policies for encrypted traffic without compromising confidentiality.
+**Features of TLS in AWS Network Firewall**
+
+TLS Decryption (TLS Inspection): Decrypts and inspects encrypted traffic for threat detection.
+
+SSL/TLS Rules: Create rules to allow, block, or monitor encrypted sessions.
+
+Certificate Management: Uses AWS Certificate Manager (ACM) for secure key management.
+
+Integration with AWS Services: Works with VPC, AWS Security Hub, CloudWatch, and GuardDuty.
+
+Compliance & Security: Helps meet PCI DSS, HIPAA, and GDPR requirements.
+
+TLS in AWS Network Firewall →  Ensures inbound and outbound traffic is inspected securely.
+- 
+
   
 
  
