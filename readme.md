@@ -8,7 +8,7 @@
 <a name="intro">
  
 ## Introduction
-AWS Network Firewall connector ingests  AWS service logs into Azure Sentinel. Currently supported logs include: flow logs & Alert logs.
+AWS Network Firewall connector ingests  AWS service logs into Azure Sentinel. Currently supported logs include: flow logs,Alert logs& Tls logs.
  
 This connector requires that each AWS service publish its logs to an S3 bucket in your account. In addition you must configure SQS notifications and permissions for the connector to retrieve the logs.
  
