@@ -16,7 +16,7 @@ More information on the connector and configuration instructions can be found on
  
 ## Configuration process
 1. Create an AWS assumed role and grant access to the AWS Sentinel account.
-2. Configure the AWS service ( Flow Logs& Event) to export logs to an S3 bucket.
+2. Configure the AWS service ( Flow Logs, Alert Logs& Tls Logs) to export logs to an S3 bucket.
 3. Create a standard Simple Queue Service (SQS) in AWS.
 4. Enable SQS notification.
 5. Grant the Sentinel AWS account access to the S3 bucket & SQS.
