@@ -26,7 +26,7 @@ More information on the connector and configuration instructions can be found on
 ## Prerequisites
 
 The below mentioned resources are required to connect Aws Network Firewall with Sentinel.
-- Aws account
+- Aws account(project Id,project name)
 - VPC, Subnets,Internet gatway
 - Ec2 instance
 - S3 bucket
